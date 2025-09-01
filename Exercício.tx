@@ -1,0 +1,19 @@
+Questão 2-Qual p melhor local para instanciar a classe CreateUserController, CreateUserUsecase,RepositoryAdapterPostgre e RepositoryAdapterMsql sem framework?
+
+Resposta: 
+
+O melhor local para instanciar as classes é em um arquivo principal de inicialização (ex.: main.ts), centralizando a criação dos objetos e fazendo a injeção de dependências manualmente.
+Nesse arquivo, você cria uma instância do repositório (RepositoryAdapterPostgre ou RepositoryAdapterMysql), injeta no CreateUserUsecase e depois injeta no CreateUserController.
+Assim, mantém o código desacoplado e organizado.
+
+
+
+Questão 3- Como seria instanciar a classe CreateUserController, CreateUserUsecase, RepositoryAdapterPostgre e RepositoryAdapterMsql com framework?
+
+Resposta:
+
+Com um framework que oferece injeção de dependência (como NestJS ou Spring), basta registrar cada classe como provider/service/controller. 
+O framework cria e injeta as dependências automaticamente.Assim, não é necessário instanciar manualmente as classes, pois o container de injeção do framework faz isso por você.
+
+
+
