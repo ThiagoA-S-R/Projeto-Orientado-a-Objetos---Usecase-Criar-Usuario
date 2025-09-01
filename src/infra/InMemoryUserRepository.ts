@@ -1,4 +1,3 @@
-// infra/InMemoryUserRepository.ts
 import { IRepos } from "../application/ports/IRepository";
 import { User } from "../domain/User";
 import { UuidGenerator } from "../utils/UuidGenerator";
@@ -18,14 +17,13 @@ export class InMemoryUserRepository implements IRepos {
     return user ?? null;
   }
 
-  // opcional: método auxiliar para criar o usuário
   async createUser(name: string, email: string): Promise<User> {
     User.validate(name, email);
     const user = new User(this.uuidGenerator.generate(), name, email);
     return this.save(user);
   }
 
-  findAll(): User[] { // opcional, não está na interface IRepos
+  findAll(): User[] { 
     return this.users;
   }
 }

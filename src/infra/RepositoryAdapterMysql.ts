@@ -1,9 +1,8 @@
-// infra/RepositoryAdapterMysql.ts
 import { IRepos } from "../application/ports/IRepository";
 import { User } from "../domain/User";
 
 export class RepositoryAdapterMysql implements IRepos {
-  private db: User[] = []; // simulação
+  private db: User[] = []; 
 
   async save(user: User): Promise<User> {
     this.db.push(user);

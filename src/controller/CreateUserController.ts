@@ -1,4 +1,3 @@
-// src/controllers/CreateUserController.ts
 import { CreateUserUsecase } from "../application/usecase/CreateUserUsecase";
 import { InMemoryUserRepository } from "../infra/InMemoryUserRepository";
 import { NodeUuidGenerator } from "../utils/UuidGenerator";

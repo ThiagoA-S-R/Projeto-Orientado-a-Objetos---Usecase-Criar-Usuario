@@ -1,4 +1,3 @@
-// application/ports/IUsecase.ts
 import { User } from "../../domain/User";
 
 export interface IUsecase {

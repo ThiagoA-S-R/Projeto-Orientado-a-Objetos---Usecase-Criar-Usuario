@@ -1,4 +1,3 @@
-// application/ports/IRepos.ts
 import { User } from "../../domain/User";
 
 export interface IRepos {
